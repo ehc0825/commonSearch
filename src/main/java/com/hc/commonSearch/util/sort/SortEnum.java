@@ -17,12 +17,12 @@ public enum SortEnum {
     SortEnum(AbstractSort abstractSort) {this.abstractSort=abstractSort;}
 
 
-    public SearchSourceBuilder buildSortOrderBySort(String sort, SearchSourceBuilder searchSourceBuilder)
+    public static SearchSourceBuilder buildSortOrderBySort(String sort, SearchSourceBuilder searchSourceBuilder)
     {
         return searchSourceBuilder = find(sort).abstractSort.buildSort(searchSourceBuilder);
     }
 
-    private static SortEnum find(String sort)
+    public static SortEnum find(String sort)
     {
         return Arrays.stream(values())
                 .filter(sortEnum -> sortEnum.abstractSort.sort.equals(sort))

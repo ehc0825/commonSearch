@@ -1,6 +1,6 @@
 package com.hc.commonSearch.util.sort;
 
-import org.elasticsearch.action.search.SearchRequest;
+
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 public abstract class AbstractSort {
