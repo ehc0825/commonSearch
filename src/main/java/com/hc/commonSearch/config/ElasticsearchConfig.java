@@ -31,7 +31,7 @@ public class ElasticsearchConfig {
     private String elasticPassword;
 
     @Bean(name = "client" ,destroyMethod = "close")
-    public RestHighLevelClient highLevelClient(){
+    public RestHighLevelClient highLevelClient() {
         RestClientBuilder restClientBuilder = RestClient.builder(new HttpHost(elasticHost,elasticPort,elasticProtocol));
         restClientBuilder.setRequestConfigCallback(requestConfigBuilder -> requestConfigBuilder.setConnectTimeout(30*1000).setConnectTimeout(10*60*1000));
         if(elasticId != null && elasticPassword !=null)
