@@ -25,4 +25,14 @@ public class SearchParam {
 
     private SearchSourceBuilder searchSourceBuilder;
 
+    public void setSearchParam(RequestParam requestParam)
+    {
+        this.query=requestParam.getQuery();
+        this.oldQuery=requestParam.getOldQuery();
+        this.minPrice=requestParam.getMinPrice();
+        this.maxPrice=requestParam.getMaxPrice();
+        this.research=requestParam.isResearch();
+        this.sort=requestParam.getSort();
+    }
+
 }

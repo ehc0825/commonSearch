@@ -1,9 +1,7 @@
 package com.hc.commonSearch.util.range;
 
 import com.hc.commonSearch.dto.SearchParam;
-import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.index.query.RangeQueryBuilder;
 
 public class PriceRangeQueryBuilder {
 

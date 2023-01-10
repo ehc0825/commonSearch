@@ -3,7 +3,6 @@ package com.hc.commonSearch.util.research;
 import com.hc.commonSearch.dto.SearchParam;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 public class ResearchQueryBuilder {
 
