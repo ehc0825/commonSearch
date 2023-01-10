@@ -18,7 +18,7 @@ class SortEnumTest {
         String findResult=SortEnum.find(sort).toString();
         if(findResult.equals("OLDEST"))
         {
-            success=true;
+            success = true;
         }
         assertThat(success).isTrue();
     }
@@ -29,6 +29,18 @@ class SortEnumTest {
         String sort="newest";
         SearchSourceBuilder searchSourceBuilder=SortEnum.buildSortOrderBySort(sort,new SearchSourceBuilder());
         if(searchSourceBuilder.toString().contains("asc") && searchSourceBuilder.toString().contains(DATE_FIELD))
+        {
+            success = true;
+        }
+        assertThat(success).isTrue();
+    }
+
+    @Test
+    void testFindUnUsedSortOrder(){
+        boolean success = false;
+        String sort= "strangeString$%@#";
+        String findResult=SortEnum.find(sort).toString();
+        if(findResult.equals("NONE"))
         {
             success = true;
         }
