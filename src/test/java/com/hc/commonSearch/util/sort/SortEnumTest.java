@@ -23,7 +23,6 @@ class SortEnumTest {
         assertThat(success).isTrue();
     }
 
-
     @Test
     void testBuildSortOrder(){
         boolean success = false;
