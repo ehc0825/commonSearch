@@ -11,7 +11,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @SpringBootTest
 class SortEnumTest {
 
-    @Test()
+    @Test
     void findSort(){
         boolean success = false;
         String sort="oldest";
