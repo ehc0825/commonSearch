@@ -19,7 +19,7 @@ public enum SortEnum {
 
     public static SearchSourceBuilder buildSortOrderBySort(String sort, SearchSourceBuilder searchSourceBuilder)
     {
-        return searchSourceBuilder = find(sort).abstractSort.buildSort(searchSourceBuilder);
+        return find(sort).abstractSort.buildSort(searchSourceBuilder);
     }
 
     public static SortEnum find(String sort)

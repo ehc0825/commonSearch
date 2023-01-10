@@ -33,13 +33,15 @@ public class ElasticsearchConfig {
     @Bean(name = "client" ,destroyMethod = "close")
     public RestHighLevelClient highLevelClient() {
         RestClientBuilder restClientBuilder = RestClient.builder(new HttpHost(elasticHost,elasticPort,elasticProtocol));
-        restClientBuilder.setRequestConfigCallback(requestConfigBuilder -> requestConfigBuilder.setConnectTimeout(30*1000).setConnectTimeout(10*60*1000));
+        restClientBuilder.setRequestConfigCallback(requestConfigBuilder
+                -> requestConfigBuilder.setConnectTimeout(30*1000).setConnectTimeout(10*60*1000));
         if(elasticId != null && elasticPassword !=null)
         {
             final CredentialsProvider credentialsProvider= new BasicCredentialsProvider();
             credentialsProvider.setCredentials(AuthScope.ANY,
                     new UsernamePasswordCredentials(elasticId,elasticPassword));
-            restClientBuilder.setHttpClientConfigCallback(httpClientBuilder -> httpClientBuilder.setDefaultCredentialsProvider(credentialsProvider));
+            restClientBuilder.setHttpClientConfigCallback(httpClientBuilder
+                    -> httpClientBuilder.setDefaultCredentialsProvider(credentialsProvider));
         }
         return new RestHighLevelClient(restClientBuilder);
     }
