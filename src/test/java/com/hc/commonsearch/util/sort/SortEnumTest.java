@@ -24,7 +24,7 @@ class SortEnumTest {
     }
 
     @Test
-    void testBuildSortOrder(){
+    void testSearchSourceBuilderContainsSort(){
         boolean success = false;
         String sort="newest";
         SearchSourceBuilder searchSourceBuilder=SortEnum.buildSortOrderBySort(sort,new SearchSourceBuilder());

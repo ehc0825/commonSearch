@@ -5,7 +5,7 @@ import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 public class SortOrderBuilder {
 
-    public SearchParam buildSortOrder(SearchParam searchParam){
+    public static SearchParam buildSortOrder(SearchParam searchParam){
         SearchSourceBuilder searchSourceBuilder=
                 SortEnum.buildSortOrderBySort(searchParam.getSort(),searchParam.getSearchSourceBuilder());
         searchParam.setSearchSourceBuilder(searchSourceBuilder);
