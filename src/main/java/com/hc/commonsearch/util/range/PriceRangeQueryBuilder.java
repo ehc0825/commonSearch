@@ -1,13 +1,14 @@
 package com.hc.commonsearch.util.range;
 
 import com.hc.commonsearch.dto.SearchParam;
+import lombok.experimental.UtilityClass;
 import org.elasticsearch.index.query.QueryBuilders;
-
+@UtilityClass
 public class PriceRangeQueryBuilder {
 
     public static final String PRICE_FIELD="price";
 
-    public SearchParam buildPriceRangeQuery(SearchParam searchParam)
+    public static SearchParam buildPriceRangeQuery(SearchParam searchParam)
     {
         if(isMinRange(searchParam))
         {
@@ -22,13 +23,13 @@ public class PriceRangeQueryBuilder {
 
     private SearchParam buildBothPriceRangeQuery(SearchParam searchParam) {
         searchParam.setBoolQueryBuilder(searchParam.getBoolQueryBuilder()
-                .must(QueryBuilders.rangeQuery(PRICE_FIELD).from(searchParam.getMinPrice()).to(searchParam.getMaxPrice())));
+                .must(QueryBuilders.rangeQuery(PRICE_FIELD).gte(searchParam.getMinPrice()).lte(searchParam.getMaxPrice())));
         return searchParam;
     }
 
     private SearchParam buildMinPriceRangeQuery(SearchParam searchParam) {
         searchParam.setBoolQueryBuilder(searchParam.getBoolQueryBuilder()
-                .must(QueryBuilders.rangeQuery(PRICE_FIELD).from(searchParam.getMinPrice())));
+                .must(QueryBuilders.rangeQuery(PRICE_FIELD).gte(searchParam.getMinPrice())));
         return searchParam;
     }
 
