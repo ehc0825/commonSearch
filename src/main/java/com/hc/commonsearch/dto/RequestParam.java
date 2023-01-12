@@ -11,6 +11,8 @@ public class RequestParam {
 
     private String region;
 
+    private String category;
+
     private int minPrice;
 
     private int maxPrice;

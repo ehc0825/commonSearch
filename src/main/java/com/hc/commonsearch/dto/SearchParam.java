@@ -13,6 +13,8 @@ public class SearchParam {
 
     private String region;
 
+    private String category;
+
     private int minPrice;
 
     private int maxPrice;
@@ -32,6 +34,7 @@ public class SearchParam {
         this.query=requestParam.getQuery();
         this.oldQuery=requestParam.getOldQuery();
         this.region=requestParam.getRegion();
+        this.category=requestParam.getCategory();
         this.minPrice=requestParam.getMinPrice();
         this.maxPrice=requestParam.getMaxPrice();
         this.research=requestParam.isResearch();

@@ -17,7 +17,6 @@ class ResearchQueryBuilderTest {
 
         String query = "검색어";
         String oldQuery = "이전검색어1,이전검색어2";
-        String searchField = "contents";
 
         SearchParam searchParam = new SearchParam();
         searchParam.setSearchSourceBuilder(new SearchSourceBuilder());
