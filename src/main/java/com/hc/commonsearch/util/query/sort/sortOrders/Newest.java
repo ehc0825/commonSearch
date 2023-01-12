@@ -1,6 +1,6 @@
-package com.hc.commonsearch.util.sort.sortOrders;
+package com.hc.commonsearch.util.query.sort.sortOrders;
 
-import com.hc.commonsearch.util.sort.AbstractSort;
+import com.hc.commonsearch.util.query.sort.AbstractSort;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 

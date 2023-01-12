@@ -1,4 +1,4 @@
-package com.hc.commonsearch.util.sort;
+package com.hc.commonsearch.util.query.sort;
 
 import com.hc.commonsearch.dto.SearchParam;
 import lombok.experimental.UtilityClass;

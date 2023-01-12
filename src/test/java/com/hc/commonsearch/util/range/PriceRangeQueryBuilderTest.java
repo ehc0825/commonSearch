@@ -1,6 +1,7 @@
 package com.hc.commonsearch.util.range;
 
 import com.hc.commonsearch.dto.SearchParam;
+import com.hc.commonsearch.util.query.range.PriceRangeQueryBuilder;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,7 +17,7 @@ class PriceRangeQueryBuilderTest {
         SearchParam searchParam=new SearchParam();
         searchParam.setBoolQueryBuilder(new BoolQueryBuilder());
         searchParam.setMinPrice(10);
-        searchParam=PriceRangeQueryBuilder.buildPriceRangeQuery(searchParam);
+        searchParam= PriceRangeQueryBuilder.buildPriceRangeQuery(searchParam);
         if(searchParam.getBoolQueryBuilder().toString().contains("\"to\" : null")
                 && searchParam.getBoolQueryBuilder().toString().contains("\"from\" : 10"))
         {

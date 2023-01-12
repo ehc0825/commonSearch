@@ -1,4 +1,4 @@
-package com.hc.commonsearch.util.research;
+package com.hc.commonsearch.util.query.research;
 
 import com.hc.commonsearch.config.SearchConfig;
 import com.hc.commonsearch.dto.SearchParam;

@@ -1,4 +1,4 @@
-package com.hc.commonsearch.util.range;
+package com.hc.commonsearch.util.query.range;
 
 import com.hc.commonsearch.config.SearchConfig;
 import com.hc.commonsearch.dto.SearchParam;

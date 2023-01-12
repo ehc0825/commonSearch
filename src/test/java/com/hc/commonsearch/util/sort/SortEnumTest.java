@@ -1,10 +1,11 @@
 package com.hc.commonsearch.util.sort;
 
+import com.hc.commonsearch.util.query.sort.SortEnum;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static com.hc.commonsearch.util.sort.AbstractSort.DATE_FIELD;
+import static com.hc.commonsearch.util.query.sort.AbstractSort.DATE_FIELD;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
@@ -15,7 +16,7 @@ class SortEnumTest {
     void findSort(){
         boolean success = false;
         String sort="oldest";
-        String findResult=SortEnum.find(sort).toString();
+        String findResult= SortEnum.find(sort).toString();
         if(findResult.equals("OLDEST"))
         {
             success = true;

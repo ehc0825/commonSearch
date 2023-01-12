@@ -1,8 +1,8 @@
-package com.hc.commonsearch.util.sort;
+package com.hc.commonsearch.util.query.sort;
 
-import com.hc.commonsearch.util.sort.sortOrders.Newest;
-import com.hc.commonsearch.util.sort.sortOrders.None;
-import com.hc.commonsearch.util.sort.sortOrders.Oldest;
+import com.hc.commonsearch.util.query.sort.sortOrders.Newest;
+import com.hc.commonsearch.util.query.sort.sortOrders.None;
+import com.hc.commonsearch.util.query.sort.sortOrders.Oldest;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 import java.util.Arrays;
