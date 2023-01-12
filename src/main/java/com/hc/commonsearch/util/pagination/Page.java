@@ -1,10 +1,12 @@
 package com.hc.commonsearch.util.pagination;
 
-import com.hc.commonsearch.config.SearchConfig;
 import lombok.Data;
 
+import static com.hc.commonsearch.config.SearchConfig.NAVI_SIZE;
+import static com.hc.commonsearch.config.SearchConfig.SEARCH_SIZE;
+
 @Data
-public class Page implements SearchConfig {
+public class Page{
 
     private int currentPage;
     private int totalCount;

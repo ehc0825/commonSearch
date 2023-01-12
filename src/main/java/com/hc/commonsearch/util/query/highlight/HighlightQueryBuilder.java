@@ -1,13 +1,14 @@
 package com.hc.commonsearch.util.query.highlight;
 
-import com.hc.commonsearch.config.SearchConfig;
 import com.hc.commonsearch.dto.SearchParam;
 import lombok.experimental.UtilityClass;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 
+import static com.hc.commonsearch.config.SearchConfig.*;
+
 
 @UtilityClass
-public class HighlightQueryBuilder implements SearchConfig {
+public class HighlightQueryBuilder{
 
     public SearchParam buildHighlightQuery(SearchParam searchParam) {
         HighlightBuilder highlightBuilder = new HighlightBuilder();
@@ -18,14 +19,14 @@ public class HighlightQueryBuilder implements SearchConfig {
                 .noMatchSize(HIGHLIGHT_NO_MATCH_SIZE)
                 .fragmentSize(HIGHLIGHT_FRAGMENT_SIZE);
 
-        setHighlightFields(HIGHLIGHT_FIELDS, highlightBuilder);
-
+        searchParam.setSearchSourceBuilder(searchParam.getSearchSourceBuilder()
+                .highlighter(setHighlightFields(highlightBuilder)));
         return searchParam;
     }
 
-    private HighlightBuilder setHighlightFields(String[] fields, HighlightBuilder highlightBuilder) {
+    private HighlightBuilder setHighlightFields(HighlightBuilder highlightBuilder) {
 
-        for (String field : fields) {
+        for (String field : HIGHLIGHT_FIELDS) {
             highlightBuilder.field(field);
         }
 

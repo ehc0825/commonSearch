@@ -5,7 +5,7 @@ import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static com.hc.commonsearch.util.query.sort.AbstractSort.DATE_FIELD;
+import static com.hc.commonsearch.config.SearchConfig.DATE_FIELD;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 

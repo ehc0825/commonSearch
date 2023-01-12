@@ -1,12 +1,13 @@
 package com.hc.commonsearch.util.query.region;
 
-import com.hc.commonsearch.config.SearchConfig;
 import com.hc.commonsearch.dto.SearchParam;
 import lombok.experimental.UtilityClass;
 import org.elasticsearch.index.query.QueryBuilders;
 
+import static com.hc.commonsearch.config.SearchConfig.REGION_FIELD;
+
 @UtilityClass
-public class RegionQueryBuilder implements SearchConfig {
+public class RegionQueryBuilder {
 
 
     public SearchParam buildRegionQuery(SearchParam searchParam) {

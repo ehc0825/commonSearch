@@ -1,12 +1,13 @@
 package com.hc.commonsearch.util.query.category;
 
-import com.hc.commonsearch.config.SearchConfig;
 import com.hc.commonsearch.dto.SearchParam;
 import lombok.experimental.UtilityClass;
 import org.elasticsearch.index.query.QueryBuilders;
 
+import static com.hc.commonsearch.config.SearchConfig.CATEGORY_FIELD;
+
 @UtilityClass
-public class CategoryQueryBuilder implements SearchConfig {
+public class CategoryQueryBuilder{
 
     public SearchParam buildCategoryQuery(SearchParam searchParam) {
         if (isCategoryNotNull(searchParam)) {

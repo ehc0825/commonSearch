@@ -29,11 +29,7 @@ class ResearchQueryBuilderTest {
 
         if (searchParam.getOldQuery().contains(query)) {
             for (String tempQuery : oldQuery.split(",")) {
-                if (searchParam.getBoolQueryBuilder().toString().contains(tempQuery)) {
-                    success = true;
-                } else {
-                    success = false;
-                }
+                success = ( searchParam.getBoolQueryBuilder().toString().contains(tempQuery) );
             }
             assertThat(success).isTrue();
         }

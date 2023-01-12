@@ -1,15 +1,15 @@
 package com.hc.commonsearch.util.query.category;
 
-import com.hc.commonsearch.config.SearchConfig;
 import com.hc.commonsearch.dto.SearchParam;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static com.hc.commonsearch.config.SearchConfig.CATEGORY_FIELD;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest
-class CategoryQueryBuilderTest implements SearchConfig {
+class CategoryQueryBuilderTest{
 
     @Test
     void testBuildCategoryQuery(){

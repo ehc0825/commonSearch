@@ -17,7 +17,7 @@ class PriceRangeQueryBuilderTest {
         SearchParam searchParam=new SearchParam();
         searchParam.setBoolQueryBuilder(new BoolQueryBuilder());
         searchParam.setMinPrice(10);
-        searchParam= PriceRangeQueryBuilder.buildPriceRangeQuery(searchParam);
+        PriceRangeQueryBuilder.buildPriceRangeQuery(searchParam);
         if(searchParam.getBoolQueryBuilder().toString().contains("\"to\" : null")
                 && searchParam.getBoolQueryBuilder().toString().contains("\"from\" : 10"))
         {
@@ -34,7 +34,7 @@ class PriceRangeQueryBuilderTest {
         searchParam.setBoolQueryBuilder(new BoolQueryBuilder());
         searchParam.setMinPrice(10);
         searchParam.setMaxPrice(20);
-        searchParam=PriceRangeQueryBuilder.buildPriceRangeQuery(searchParam);
+        PriceRangeQueryBuilder.buildPriceRangeQuery(searchParam);
         if(searchParam.getBoolQueryBuilder().toString().contains("\"to\" : 20")
                 && searchParam.getBoolQueryBuilder().toString().contains("\"from\" : 10"))
         {

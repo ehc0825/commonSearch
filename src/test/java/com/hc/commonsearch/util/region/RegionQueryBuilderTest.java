@@ -1,16 +1,16 @@
 package com.hc.commonsearch.util.region;
 
-import com.hc.commonsearch.config.SearchConfig;
 import com.hc.commonsearch.dto.SearchParam;
 import com.hc.commonsearch.util.query.region.RegionQueryBuilder;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static com.hc.commonsearch.config.SearchConfig.REGION_FIELD;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest
-class RegionQueryBuilderTest implements SearchConfig {
+class RegionQueryBuilderTest{
     
     @Test
     void testBuildRegionQuery() {

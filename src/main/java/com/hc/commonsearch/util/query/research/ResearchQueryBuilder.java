@@ -1,13 +1,14 @@
 package com.hc.commonsearch.util.query.research;
 
-import com.hc.commonsearch.config.SearchConfig;
 import com.hc.commonsearch.dto.SearchParam;
 import lombok.experimental.UtilityClass;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 
+import static com.hc.commonsearch.config.SearchConfig.DEFAULT_SEARCH_FIELD;
+
 @UtilityClass
-public class ResearchQueryBuilder implements SearchConfig {
+public class ResearchQueryBuilder {
 
     public SearchParam buildResearchQuery(SearchParam searchParam) {
         if (searchParam.isResearch()) {

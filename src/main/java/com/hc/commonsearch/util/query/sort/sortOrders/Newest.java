@@ -4,6 +4,8 @@ import com.hc.commonsearch.util.query.sort.AbstractSort;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 
+import static com.hc.commonsearch.config.SearchConfig.DATE_FIELD;
+
 public class Newest extends AbstractSort {
 
     public Newest(){
