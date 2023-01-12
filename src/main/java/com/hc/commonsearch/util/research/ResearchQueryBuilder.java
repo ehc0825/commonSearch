@@ -1,9 +1,10 @@
 package com.hc.commonsearch.util.research;
 
 import com.hc.commonsearch.dto.SearchParam;
+import lombok.experimental.UtilityClass;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
-
+@UtilityClass
 public class ResearchQueryBuilder {
 
     public SearchParam buildResearchQuery(SearchParam searchParam) {

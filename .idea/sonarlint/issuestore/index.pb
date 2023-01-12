@@ -20,8 +20,6 @@ r
 Bsrc/main/java/com/hc/commonsearch/util/sort/sortOrders/Oldest.java,b/7/b75eec260021b8b318979cd3dfa19258f2a64832
 g
 7src/main/java/com/hc/commonsearch/dto/RequestParam.java,c/b/cbce18b81ddcb4c9a2f71cca7e460fc1ea822a96
-y
-Isrc/main/java/com/hc/commonsearch/util/research/ResearchQueryBuilder.java,8/d/8d00126da383f9d4ca5f3fa2e43212c37b4976ec
 f
 6src/main/java/com/hc/commonsearch/dto/ReturnParam.java,f/1/f1c35908d62ee03d323f8d6d57d27d466aab5b6e
 d
