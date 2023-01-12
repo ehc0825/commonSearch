@@ -34,6 +34,8 @@ public class SearchParam {
         this.maxPrice=requestParam.getMaxPrice();
         this.research=requestParam.isResearch();
         this.sort=requestParam.getSort();
+        this.boolQueryBuilder=new BoolQueryBuilder();
+        this.searchSourceBuilder=new SearchSourceBuilder();
     }
 
 }

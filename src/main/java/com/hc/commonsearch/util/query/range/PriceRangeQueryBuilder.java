@@ -4,6 +4,7 @@ import com.hc.commonsearch.config.SearchConfig;
 import com.hc.commonsearch.dto.SearchParam;
 import lombok.experimental.UtilityClass;
 import org.elasticsearch.index.query.QueryBuilders;
+
 @UtilityClass
 public class PriceRangeQueryBuilder implements SearchConfig {
 
