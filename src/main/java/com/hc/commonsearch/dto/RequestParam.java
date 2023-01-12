@@ -19,4 +19,6 @@ public class RequestParam {
 
     private String sort;
 
+    private int currentPage;
+
 }

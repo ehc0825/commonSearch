@@ -21,6 +21,8 @@ public class SearchParam {
 
     private String sort;
 
+    private int currentPage;
+
     private BoolQueryBuilder boolQueryBuilder;
 
     private SearchSourceBuilder searchSourceBuilder;
@@ -34,6 +36,7 @@ public class SearchParam {
         this.maxPrice=requestParam.getMaxPrice();
         this.research=requestParam.isResearch();
         this.sort=requestParam.getSort();
+        this.currentPage=requestParam.getCurrentPage();
         this.boolQueryBuilder=new BoolQueryBuilder();
         this.searchSourceBuilder=new SearchSourceBuilder();
     }
