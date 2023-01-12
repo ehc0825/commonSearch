@@ -13,9 +13,5 @@ n
 >src/test/java/com/hc/commonsearch/config/JasyptConfigTest.java,3/c/3c3ca74e9b3783014b5bea3d81c8855b9c3e90b7
 s
 Csrc/test/java/com/hc/commonsearch/CommonSearchApplicationTests.java,3/d/3d14f98efae58ba38bf99c15846f4f7dd06c4b83
-q
-Asrc/main/java/com/hc/commonsearch/config/ElasticsearchConfig.java,9/5/95522d0d87dc2200395e81e16f7092c5b14382ca
-j
-:src/main/java/com/hc/commonsearch/config/JasyptConfig.java,1/8/1896102dd5f562fd2ba9b701f25f5d45beb3304a
 u
 Esrc/main/java/com/hc/commonsearch/util/region/RegionQueryBuilder.java,d/f/dfe3ee3b62e9cceadffeb3f862f386b6ce79b491
