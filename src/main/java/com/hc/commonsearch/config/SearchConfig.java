@@ -21,4 +21,8 @@ public final class SearchConfig {
     public static final int HIGHLIGHT_NO_MATCH_SIZE = 250;
     public static final int HIGHLIGHT_FRAGMENT_SIZE = 250;
 
+    private SearchConfig(){
+        throw new IllegalStateException("Can not be instantiated");
+    }
+
 }
