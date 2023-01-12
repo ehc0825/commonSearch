@@ -11,11 +11,11 @@ public class SearchParam {
 
     private String oldQuery;
 
+    private String region;
+
     private int minPrice;
 
     private int maxPrice;
-
-    private String searchField;
 
     private boolean research;
 
@@ -29,6 +29,7 @@ public class SearchParam {
     {
         this.query=requestParam.getQuery();
         this.oldQuery=requestParam.getOldQuery();
+        this.region=requestParam.getRegion();
         this.minPrice=requestParam.getMinPrice();
         this.maxPrice=requestParam.getMaxPrice();
         this.research=requestParam.isResearch();

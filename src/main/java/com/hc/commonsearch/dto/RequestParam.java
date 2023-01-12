@@ -9,6 +9,8 @@ public class RequestParam {
 
     private String oldQuery;
 
+    private String region;
+
     private int minPrice;
 
     private int maxPrice;

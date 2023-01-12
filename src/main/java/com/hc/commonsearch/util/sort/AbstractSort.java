@@ -1,11 +1,10 @@
 package com.hc.commonsearch.util.sort;
 
 
+import com.hc.commonsearch.config.SearchConfig;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 
-public abstract class AbstractSort {
-
-    public static final String DATE_FIELD="createDate";
+public abstract class AbstractSort implements SearchConfig {
 
     protected String sort;
 

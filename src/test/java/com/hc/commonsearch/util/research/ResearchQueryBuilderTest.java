@@ -23,7 +23,6 @@ class ResearchQueryBuilderTest {
         searchParam.setBoolQueryBuilder(new BoolQueryBuilder());
         searchParam.setQuery(query);
         searchParam.setOldQuery(oldQuery);
-        searchParam.setSearchField(searchField);
         searchParam.setResearch(true);
 
         searchParam = ResearchQueryBuilder.buildResearchQuery(searchParam);

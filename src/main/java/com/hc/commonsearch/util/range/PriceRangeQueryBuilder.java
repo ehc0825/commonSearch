@@ -1,12 +1,12 @@
 package com.hc.commonsearch.util.range;
 
+import com.hc.commonsearch.config.SearchConfig;
 import com.hc.commonsearch.dto.SearchParam;
 import lombok.experimental.UtilityClass;
 import org.elasticsearch.index.query.QueryBuilders;
 @UtilityClass
-public class PriceRangeQueryBuilder {
+public class PriceRangeQueryBuilder implements SearchConfig {
 
-    public static final String PRICE_FIELD="price";
 
     public static SearchParam buildPriceRangeQuery(SearchParam searchParam)
     {
