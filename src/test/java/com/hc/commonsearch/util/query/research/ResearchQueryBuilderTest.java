@@ -1,7 +1,6 @@
 package com.hc.commonsearch.util.query.research;
 
 import com.hc.commonsearch.dto.SearchParam;
-import com.hc.commonsearch.util.query.research.ResearchQueryBuilder;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.junit.jupiter.api.Test;

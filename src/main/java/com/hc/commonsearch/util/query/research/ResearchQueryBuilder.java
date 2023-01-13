@@ -19,20 +19,18 @@ public class ResearchQueryBuilder {
         return searchParam;
     }
 
-    private SearchParam setOldQuery(SearchParam searchParam) {
+    private void setOldQuery(SearchParam searchParam) {
         String oldQuery = searchParam.getOldQuery();
         oldQuery += "," + searchParam.getQuery();
         searchParam.setOldQuery(oldQuery);
-        return searchParam;
     }
 
-    private SearchParam buildOldMustQuery(SearchParam searchParam, String[] oldMustQueries) {
+    private void buildOldMustQuery(SearchParam searchParam, String[] oldMustQueries) {
         BoolQueryBuilder boolQueryBuilder = searchParam.getBoolQueryBuilder();
         for (String mustQuery : oldMustQueries) {
             boolQueryBuilder.must(QueryBuilders.termQuery(DEFAULT_SEARCH_FIELD, mustQuery));
         }
         searchParam.setBoolQueryBuilder(boolQueryBuilder);
-        return searchParam;
     }
 
     private String[] splitOldMustQuery(SearchParam searchParam) {

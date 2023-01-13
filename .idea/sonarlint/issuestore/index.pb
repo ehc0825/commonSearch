@@ -8,5 +8,3 @@ n
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-f
-6src/main/java/com/hc/commonsearch/dto/ReturnParam.java,f/1/f1c35908d62ee03d323f8d6d57d27d466aab5b6e

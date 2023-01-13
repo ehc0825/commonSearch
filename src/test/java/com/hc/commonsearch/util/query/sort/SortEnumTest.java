@@ -1,6 +1,5 @@
 package com.hc.commonsearch.util.query.sort;
 
-import com.hc.commonsearch.util.query.sort.SortEnum;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

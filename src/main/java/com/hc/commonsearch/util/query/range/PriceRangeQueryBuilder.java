@@ -23,16 +23,14 @@ public class PriceRangeQueryBuilder {
         return searchParam;
     }
 
-    private SearchParam buildBothPriceRangeQuery(SearchParam searchParam) {
+    private void buildBothPriceRangeQuery(SearchParam searchParam) {
         searchParam.setBoolQueryBuilder(searchParam.getBoolQueryBuilder()
                 .must(QueryBuilders.rangeQuery(PRICE_FIELD).gte(searchParam.getMinPrice()).lte(searchParam.getMaxPrice())));
-        return searchParam;
     }
 
-    private SearchParam buildMinPriceRangeQuery(SearchParam searchParam) {
+    private void buildMinPriceRangeQuery(SearchParam searchParam) {
         searchParam.setBoolQueryBuilder(searchParam.getBoolQueryBuilder()
                 .must(QueryBuilders.rangeQuery(PRICE_FIELD).gte(searchParam.getMinPrice())));
-        return searchParam;
     }
 
     private boolean isMinRange(SearchParam searchParam) {
